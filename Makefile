@@ -1,7 +1,9 @@
-NAME = nugaon/kerberos-with-ldap
+NAME = finishertech/kerberos-with-ldap
 VERSION = 1.0.0
 
 .PHONY: build build-nocache tag-latest push push-latest release git-tag-version
+
+all: build tag tag-latest
 
 build:
 	docker build -t $(NAME):$(VERSION) .
